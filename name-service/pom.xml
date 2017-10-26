@@ -43,12 +43,6 @@
       </dependency>
 
       <dependency>
-        <groupId>commons-logging</groupId>
-        <artifactId>commons-logging</artifactId>
-        <scope>test</scope>
-      </dependency>
-
-      <dependency>
          <groupId>org.wildfly.swarm</groupId>
          <artifactId>arquillian</artifactId>
          <scope>test</scope>
