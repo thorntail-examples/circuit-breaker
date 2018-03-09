@@ -25,7 +25,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.wildfly.swarm.arquillian.DefaultDeployment;
 
-import com.jayway.restassured.RestAssured;
+import io.restassured.RestAssured;
 
 /**
  *

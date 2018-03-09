@@ -15,7 +15,7 @@
    <parent>
       <groupId>io.openshift</groupId>
       <artifactId>booster-parent</artifactId>
-      <version>10</version>
+      <version>18</version>
    </parent>
 
    <groupId>io.openshift.booster</groupId>
@@ -26,11 +26,11 @@
    <name>WildFly Swarm - Circuit Breaker Booster</name>
 
    <properties>
-      <version.wildfly.swarm>2017.10.0</version.wildfly.swarm>
+      <version.wildfly.swarm>2018.3.3</version.wildfly.swarm>
       <version.resteasy>3.0.19.Final</version.resteasy>
-      <version.arquillian.cube>1.9.1</version.arquillian.cube>
       <version.javax.json>1.0.4</version.javax.json>
-      <version.junit>4.12</version.junit>      
+      <version.junit>4.12</version.junit>
+      <version.restassured>3.0.6</version.restassured>
    </properties>
 
    <modules>
@@ -57,19 +57,19 @@
          </dependency>
 
          <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${version.restassured}</version>
+            <scope>test</scope> 
+         </dependency>
+
+         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>4.5.1</version>
             <scope>test</scope>
         </dependency>
 
-         <dependency>
-            <groupId>org.arquillian.cube</groupId>
-            <artifactId>arquillian-cube-bom</artifactId>
-            <version>${version.arquillian.cube}</version>
-            <type>pom</type>
-            <scope>import</scope>
-         </dependency>
       </dependencies>
    </dependencyManagement>
 

@@ -25,6 +25,7 @@
 
    <properties>
       <version.override.jackson>2.7.7</version.override.jackson>
+      <version.awaitility>3.0.0</version.awaitility> 
    </properties>
 
    <dependencies>
@@ -60,6 +61,18 @@
       <dependency>
          <groupId>org.jboss.arquillian.junit</groupId>
          <artifactId>arquillian-junit-container</artifactId>
+      </dependency>
+
+      <dependency>
+         <groupId>io.rest-assured</groupId>
+         <artifactId>rest-assured</artifactId>
+      </dependency>
+
+      <dependency>
+         <groupId>org.awaitility</groupId>
+         <artifactId>awaitility</artifactId>
+         <version>${version.awaitility}</version>
+         <scope>test</scope>
       </dependency>
 
       <dependency>
