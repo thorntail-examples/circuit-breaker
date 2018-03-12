@@ -59,11 +59,6 @@
       </dependency>
 
       <dependency>
-         <groupId>org.jboss.arquillian.junit</groupId>
-         <artifactId>arquillian-junit-container</artifactId>
-      </dependency>
-
-      <dependency>
          <groupId>io.rest-assured</groupId>
          <artifactId>rest-assured</artifactId>
       </dependency>
@@ -72,6 +67,12 @@
          <groupId>org.awaitility</groupId>
          <artifactId>awaitility</artifactId>
          <version>${version.awaitility}</version>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>org.wildfly.swarm</groupId>
+         <artifactId>arquillian</artifactId>
          <scope>test</scope>
       </dependency>
 
