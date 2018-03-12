@@ -23,11 +23,6 @@
 
    <name>WildFly Swarm - C/B Booster - Tests</name>
 
-   <properties>
-      <version.override.jackson>2.7.7</version.override.jackson>
-      <version.awaitility>3.0.0</version.awaitility> 
-   </properties>
-
    <dependencies>
 
       <dependency>
