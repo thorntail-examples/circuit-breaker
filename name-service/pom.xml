@@ -49,8 +49,8 @@
       </dependency>
 
       <dependency>
-         <groupId>org.jboss.arquillian.junit</groupId>
-         <artifactId>arquillian-junit-container</artifactId>
+         <groupId>io.rest-assured</groupId>
+         <artifactId>rest-assured</artifactId>
          <scope>test</scope>
       </dependency>
 

@@ -18,21 +18,21 @@
 
 package io.openshift.booster;
 
-import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import javax.json.Json;
 
-import com.jayway.restassured.RestAssured;
-import com.jayway.restassured.response.Response;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import org.arquillian.cube.openshift.impl.enricher.AwaitRoute;
 import org.arquillian.cube.openshift.impl.enricher.RouteURL;
 import org.jboss.arquillian.junit.Arquillian;
-import org.junit.Before;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static com.jayway.awaitility.Awaitility.await;
-import static com.jayway.restassured.RestAssured.get;
+import static io.restassured.RestAssured.get;
+import static org.awaitility.Awaitility.await;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.core.IsEqual.equalTo;
 
@@ -58,22 +58,12 @@ public class OpenshiftIT {
     private static final long REQUEST_THRESHOLD = 3;
 
     @RouteURL(NAME_SERVICE_APP)
-    private URL nameServiceUrl;
+    @AwaitRoute(path = "/api/info")
+    private String nameServiceUrl;
 
     @RouteURL(GREETING_SERVICE_APP)
-    private URL greetingServiceUrl;
-
-    @Before
-    public void setup() {
-        await().pollInterval(1, TimeUnit.SECONDS).atMost(5, TimeUnit.MINUTES).until(() -> {
-            try {
-                return get(greetingServiceUrl).getStatusCode() == 200
-                        && get(nameServiceUrl + "api/info").getStatusCode() == 200;
-            } catch (Exception ignored) {
-                return false;
-            }
-        });
-    }
+    @AwaitRoute
+    private String greetingServiceUrl;
 
     @Test
     public void testCircuitBreaker() throws InterruptedException {
