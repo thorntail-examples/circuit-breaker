@@ -14,14 +14,14 @@
 
    <parent>
       <groupId>io.openshift.booster</groupId>
-      <artifactId>wfswarm-circuit-breaker-parent</artifactId>
+      <artifactId>thorntail-circuit-breaker-parent</artifactId>
       <version>7-SNAPSHOT</version>
    </parent>
 
-   <artifactId>wfswarm-circuit-breaker-tests</artifactId>
+   <artifactId>thorntail-circuit-breaker-tests</artifactId>
    <packaging>jar</packaging>
 
-   <name>WildFly Swarm - C/B Booster - Tests</name>
+   <name>Thorntail - C/B Booster - Tests</name>
 
    <dependencies>
 
@@ -41,14 +41,14 @@
 
       <dependency>
          <groupId>io.openshift.booster</groupId>
-         <artifactId>wfswarm-circuit-breaker-name</artifactId>
+         <artifactId>thorntail-circuit-breaker-name</artifactId>
          <version>${project.version}</version>
          <classifier>classes</classifier>
       </dependency>
 
       <dependency>
          <groupId>io.openshift.booster</groupId>
-         <artifactId>wfswarm-circuit-breaker-greeting</artifactId>
+         <artifactId>thorntail-circuit-breaker-greeting</artifactId>
          <version>${project.version}</version>
          <classifier>classes</classifier>
       </dependency>
@@ -66,7 +66,7 @@
       </dependency>
 
       <dependency>
-         <groupId>org.wildfly.swarm</groupId>
+         <groupId>io.thorntail</groupId>
          <artifactId>arquillian</artifactId>
          <scope>test</scope>
       </dependency>

@@ -15,18 +15,18 @@
    <parent>
       <groupId>io.openshift</groupId>
       <artifactId>booster-parent</artifactId>
-      <version>20</version>
+      <version>23</version>
    </parent>
 
    <groupId>io.openshift.booster</groupId>
-   <artifactId>wfswarm-circuit-breaker-parent</artifactId>
+   <artifactId>thorntail-circuit-breaker-parent</artifactId>
    <version>7-SNAPSHOT</version>
    <packaging>pom</packaging>
 
-   <name>WildFly Swarm - Circuit Breaker Booster</name>
+   <name>Thorntail - Circuit Breaker Booster</name>
 
    <properties>
-      <version.wildfly.swarm>2018.3.3</version.wildfly.swarm>
+      <version.thorntail>2.0.0.Final</version.thorntail>
       <version.resteasy>3.0.24.Final</version.resteasy>
       <version.javax.json>1.0.4</version.javax.json>
       <version.junit>4.12</version.junit>
@@ -43,9 +43,9 @@
    <dependencyManagement>
       <dependencies>
          <dependency>
-            <groupId>org.wildfly.swarm</groupId>
+            <groupId>io.thorntail</groupId>
             <artifactId>bom</artifactId>
-            <version>${version.wildfly.swarm}</version>
+            <version>${version.thorntail}</version>
             <type>pom</type>
             <scope>import</scope>
          </dependency>
@@ -63,9 +63,9 @@
    <build>
       <plugins>
          <plugin>
-            <groupId>org.wildfly.swarm</groupId>
-            <artifactId>wildfly-swarm-plugin</artifactId>
-            <version>${version.wildfly.swarm}</version>
+            <groupId>io.thorntail</groupId>
+            <artifactId>thorntail-maven-plugin</artifactId>
+            <version>${version.thorntail}</version>
             <executions>
                <execution>
                   <goals>
