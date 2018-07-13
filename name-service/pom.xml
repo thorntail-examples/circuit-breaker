@@ -14,24 +14,31 @@
 
    <parent>
       <groupId>io.openshift.booster</groupId>
-      <artifactId>wfswarm-circuit-breaker-parent</artifactId>
+      <artifactId>thorntail-circuit-breaker-parent</artifactId>
       <version>7-SNAPSHOT</version>
    </parent>
 
-   <artifactId>wfswarm-circuit-breaker-name</artifactId>
+   <artifactId>thorntail-circuit-breaker-name</artifactId>
    <packaging>war</packaging>
 
-   <name>WildFly Swarm - C/B Booster - Name Service</name>
+   <name>Thorntail - C/B Booster - Name Service</name>
 
    <dependencies>
       <dependency>
-         <groupId>org.wildfly.swarm</groupId>
+         <groupId>io.thorntail</groupId>
          <artifactId>jaxrs</artifactId>
       </dependency>
 
       <dependency>
-         <groupId>org.wildfly.swarm</groupId>
-         <artifactId>monitor</artifactId>
+         <groupId>io.thorntail</groupId>
+         <artifactId>microprofile-health</artifactId>
+         <!-- workaround for https://issues.jboss.org/browse/THORN-2015 -->
+         <exclusions>
+            <exclusion>
+               <groupId>org.wildfly.swarm</groupId>
+               <artifactId>config-api-runtime</artifactId>
+            </exclusion>
+         </exclusions>
       </dependency>
 
       <!-- We need this because of CorsFilter -->
@@ -43,7 +50,7 @@
       </dependency>
 
       <dependency>
-         <groupId>org.wildfly.swarm</groupId>
+         <groupId>io.thorntail</groupId>
          <artifactId>arquillian</artifactId>
          <scope>test</scope>
       </dependency>
@@ -75,7 +82,7 @@
                   <configuration>
                      <generator>
                         <includes>
-                           <include>wildfly-swarm</include>
+                           <include>thorntail-v2</include>
                         </includes>
                         <excludes>
                            <exclude>webapp</exclude>
@@ -83,9 +90,9 @@
                      </generator>
                      <enricher>
                         <config>
-                           <wildfly-swarm-health-check>
+                           <thorntail-v2-health-check>
                               <path>/api/info</path>
-                           </wildfly-swarm-health-check>
+                           </thorntail-v2-health-check>
                         </config>
                      </enricher>
                   </configuration>

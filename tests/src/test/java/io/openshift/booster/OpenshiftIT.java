@@ -42,8 +42,8 @@ import static org.hamcrest.core.IsEqual.equalTo;
 @RunWith(Arquillian.class)
 public class OpenshiftIT {
 
-    private static final String NAME_SERVICE_APP = "wfswarm-circuit-breaker-name";
-    private static final String GREETING_SERVICE_APP = "wfswarm-circuit-breaker-greeting";
+    private static final String NAME_SERVICE_APP = "thorntail-circuit-breaker-name";
+    private static final String GREETING_SERVICE_APP = "thorntail-circuit-breaker-greeting";
 
     private static final String OK = "ok";
     private static final String FAIL = "fail";
