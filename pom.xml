@@ -20,7 +20,7 @@
 
    <groupId>io.openshift.booster</groupId>
    <artifactId>thorntail-circuit-breaker-parent</artifactId>
-   <version>10</version>
+   <version>11-SNAPSHOT</version>
    <packaging>pom</packaging>
 
    <name>Thorntail - Circuit Breaker Booster</name>
