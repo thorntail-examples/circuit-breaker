@@ -39,7 +39,6 @@
       <groupId>io.thorntail</groupId>
       <artifactId>microprofile-health</artifactId>
     </dependency>
-
     <!-- We need this because of CorsFilter -->
     <dependency>
       <groupId>org.jboss.resteasy</groupId>
