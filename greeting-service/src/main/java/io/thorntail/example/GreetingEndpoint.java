@@ -32,9 +32,6 @@ public class GreetingEndpoint {
     @RestClient
     private NameService nameService;
 
-    @Inject
-    private NameService.CircuitBreakerObserver circuitBreaker;
-
     @GET
     @Path("/greeting")
     @Produces(MediaType.APPLICATION_JSON)
