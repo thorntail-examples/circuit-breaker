@@ -22,7 +22,7 @@
   <parent>
     <groupId>io.thorntail.example</groupId>
     <artifactId>thorntail-circuit-breaker-parent</artifactId>
-    <version>16</version>
+    <version>17-SNAPSHOT</version>
   </parent>
 
   <artifactId>thorntail-circuit-breaker-tests</artifactId>
